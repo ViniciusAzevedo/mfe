@@ -5,7 +5,6 @@
     "start": "webpack serve --config config/webpack.dev.js",
     "build" : "webpack --config config/webpack.prod.js"
   },
-  
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -13,6 +12,7 @@
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0"
   },
+
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.1",
