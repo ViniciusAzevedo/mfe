@@ -1,5 +1,7 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import MarketingApp from "../components/MarketingApp";
+import Header from "../components/Header";
 
 // mount is not a React componente because it is a project`s requirement
 // of not making assumptions of a specific framework is used by a remote MF
@@ -8,10 +10,11 @@ import MarketingApp from "../components/MarketingApp";
 
 export default () => {
   return (
-    <div>
-      <h1>Hi there, this is App talking!!!!!!!!</h1>
-      <hr></hr>
-      <MarketingApp />
-    </div>
+    <BrowserRouter>
+      <div>
+        <Header />
+        <MarketingApp />
+      </div>
+    </BrowserRouter>
   );
 };
