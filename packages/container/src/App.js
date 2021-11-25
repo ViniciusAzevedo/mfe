@@ -1,5 +1,10 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from "@material-ui/core/styles";
+
 import MarketingApp from "../components/MarketingApp";
 import Header from "../components/Header";
 
@@ -8,13 +13,19 @@ import Header from "../components/Header";
 // mount should be a pure js function
 // if we ever decide to swap technologies, both sides are free to do it!
 
+const generateClassName = createGenerateClassName({
+  productionPrefix: "co",
+});
+
 export default () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Header />
-        <MarketingApp />
-      </div>
-    </BrowserRouter>
+    <StylesProvider generateClassName={generateClassName}>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <MarketingApp />
+        </div>
+      </BrowserRouter>
+    </StylesProvider>
   );
 };
